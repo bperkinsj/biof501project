@@ -10,4 +10,3 @@ Birds are a very diverse group of vertebrates. The most diverse, in fact, and wi
 
 ## Dependencies and versions
 Python=3.8.10
-sepp=4.5.2
