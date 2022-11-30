@@ -9,4 +9,16 @@ Birds are a very diverse group of vertebrates. The most diverse, in fact, and wi
 
 
 ## Dependencies and versions
-Python=3.8.10
+Python 3.10.4
+
+Snakemake 7.18.2
+
+IQTree 2.2.0.3
+
+MAFFT 7.508
+
+Orthofinder 2.4.0
+
+
+## Installation
+Created a snakemake environment using conda named biof501. I will use this for my project.
