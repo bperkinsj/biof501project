@@ -9,16 +9,20 @@ Birds are a very diverse group of vertebrates. The most diverse, in fact, and wi
 
 
 ## Dependencies and versions
-Python 3.10.4
+Python 3.6.3
 
-Snakemake 7.18.2
+Diamond 0.9.24
 
-IQTree 2.2.0.3
+Snakemake 3.13.3
 
-MAFFT 7.508
+IQTree 2.1.4_beta
 
-Orthofinder 2.4.0
+MAFFT 7.505
+
+Orthofinder 2.5.4
 
 
 ## Installation
 Created a snakemake environment using conda named biof501. I will use this for my project.
+
+Managed to get orthofinder to work through conda. Had to update diamond to the recommended version.
