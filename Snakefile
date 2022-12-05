@@ -3,7 +3,7 @@ rule all:
 
 rule longest_gene_variant:
     input:
-        'data/{sample}.faa'
+        'data/{sample}.fa'
     output:
         'data/{sample}.fa'
     shell:
