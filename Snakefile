@@ -9,3 +9,4 @@ rule longest_gene_variant:
 
 rule orthofinder:
     input:
+        'directory(data)'
