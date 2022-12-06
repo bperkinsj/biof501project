@@ -7,6 +7,22 @@ Here you will find all information of note in the universe. Every morsel, every 
 Birds are a very diverse group of vertebrates. The most diverse, in fact, and within this diversity is an extraordinary range of physical characteristics and abilities. Hummingbirds have heart rates that can vary from 1000 bpm when excited to 50 bpm when at rest. Owls have eyes so large that they cannot turn them in their sockets, and must instead rotate their heads up to 270 degrees to make up for this. Arctic terns migrate 70,900 km per year in their trips from their breeding grounds in Iceland and Greenland to their wintering grounds in Antarctica and back.
 
 
+### Species of interest
+Little spotted kiwi (paleoagnathae)
+
+Helmeted guineafowl (galloanseres)
+
+Budgerigar (Neoaves, psittaciformes)
+
+Collared flycatcher (passeriformes)
+
+Spoon-billed sandpiper (neoaves, charadriiformes)
+
+Emperor penguin (neoaves, sphenisciformes)
+
+
+
+
 
 ## Dependencies and versions
 Python 3.6.3
