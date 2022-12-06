@@ -25,7 +25,7 @@ Burrowing owl (neoaves, strigiformes)
 
 
 ## Dependencies and versions
-Python 3.6.3
+Python 3.6.13
 
 Diamond 0.9.24
 
@@ -38,6 +38,10 @@ MAFFT 7.505
 Orthofinder 2.5.4
 
 Perl 5.26.2
+
+Plottree 0.0.2
+
+BioPython 1.79
 
 
 ## Installation
