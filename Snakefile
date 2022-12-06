@@ -10,23 +10,22 @@ rule longest_gene_variant:
     shell:
         'for f in {input}; do python ~/anaconda3/pkgs/orthofinder-2.5.4-hdfd78af_0/bin/primary_transcript.py $f ; done'
 
-rule orthofinder:
+rule orthofinder_trees:
     input:
         'directory(data/primary_transcripts)'
     shell:
         'orthofinder -f {input} -n orthofinder'
 
-rule msa:
+rule msa_trees:
     input:
         'directory(data/primary_transcripts)'
     shell:
         'orthofinder -f {input} -M msa -n msa'
-    
 
-rule motree:
+rule motree_comparison:
     input:
-        tree1='data/FASTTREE_trees/{orthogroup}.tree',
-        tree2='data/Results_*/Resolved_Gene_Trees/{orthogroup}.txt'
+        tree1='data/primary_transcripts/OrthoFinder/Results_orthofinder/Resolved_Gene_Trees/{orthogroup}.txt',
+        tree2='data/primary_transcripts/OrthoFinder/Results_msa/Resolved_Gene_Trees/{orthogroup}.txt'
     output:
         'data/comparison_tables/{orthogroup}.tsv'
     shell:
