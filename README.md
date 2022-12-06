@@ -53,3 +53,9 @@ Managed to get orthofinder to work through conda. Had to update diamond to the r
 ```
 conda env create -f environment.yml
 ```
+
+You will also have to install graphviz.
+
+```
+sudo apt install graphviz
+```
