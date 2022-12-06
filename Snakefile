@@ -9,12 +9,13 @@ rule longest_gene_variant:
 
 rule orthofinder:
     input:
-        'directory(data)'
+        'directory(data/primary_transcripts)'
     shell:
         'orthofinder -f {input}'
 
 rule mafft:
     input:
+        
     output:
     shell:
 
