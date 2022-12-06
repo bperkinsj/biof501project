@@ -12,3 +12,18 @@ rule orthofinder:
         'directory(data)'
     shell:
         'orthofinder -f {input}'
+
+rule mafft:
+    input:
+    output:
+    shell:
+
+rule fasttree:
+    input:
+    output:
+    shell:
+
+rule motree:
+    input:
+    output:
+    shell:
