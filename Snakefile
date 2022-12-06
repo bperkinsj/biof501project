@@ -1,5 +1,5 @@
-rule all:
-    input:
+# rule all:
+#     input:
 
 rule longest_gene_variant:
     input:
@@ -23,8 +23,11 @@ rule mafft:
 
 rule fasttree:
     input:
+        'data/MAFFT_alignments/{orthogroup}.fa'
     output:
+        'data/FASTTREE_trees/{orthogroup}.tree'
     shell:
+        'FastTree < {input} > {output}'
 
 rule motree:
     input:
