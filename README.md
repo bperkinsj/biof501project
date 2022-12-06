@@ -26,3 +26,7 @@ Orthofinder 2.5.4
 Created a snakemake environment using conda named biof501. I will use this for my project.
 
 Managed to get orthofinder to work through conda. Had to update diamond to the recommended version.
+
+```
+conda env create -f environment.yml
+```
