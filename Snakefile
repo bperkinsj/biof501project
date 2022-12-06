@@ -15,9 +15,11 @@ rule orthofinder:
 
 rule mafft:
     input:
-
+        'data/Results_{date}/Single_Copy_Orthologue_Sequences/{orthogroup}.fa'
     output:
+        'data/MAFFT_alignments/{orthogroup}.fa'
     shell:
+        'for i in {1..100}; do mafft {input} > {output}; done'
 
 rule fasttree:
     input:
