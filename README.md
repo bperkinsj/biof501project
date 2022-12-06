@@ -14,11 +14,11 @@ Helmeted guineafowl (galloanseres)
 
 Budgerigar (Neoaves, psittaciformes)
 
-Collared flycatcher (passeriformes)
+Collared flycatcher (neoaves, passeriformes)
 
 Spoon-billed sandpiper (neoaves, charadriiformes)
 
-Emperor penguin (neoaves, sphenisciformes)
+Burrowing owl (neoaves, strigiformes)
 
 
 
