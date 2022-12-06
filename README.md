@@ -21,6 +21,8 @@ MAFFT 7.505
 
 Orthofinder 2.5.4
 
+Perl 5.26.2
+
 
 ## Installation
 Created a snakemake environment using conda named biof501. I will use this for my project.
