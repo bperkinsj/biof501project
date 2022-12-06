@@ -14,23 +14,14 @@ rule orthofinder:
     input:
         'directory(data/primary_transcripts)'
     shell:
-        'orthofinder -f {input}'
+        'orthofinder -f {input} -n orthofinder'
 
-rule mafft:
+rule msa:
     input:
-        'data/Results_*/Single_Copy_Orthologue_Sequences/{orthogroup}.fa'
-    output:
-        'data/MAFFT_alignments/{orthogroup}.fa'
+        'directory(data/primary_transcripts)'
     shell:
-        'for i in {1..100}; do mafft {input} > {output}; done'
-
-rule fasttree:
-    input:
-        'data/MAFFT_alignments/{orthogroup}.fa'
-    output:
-        'data/FASTTREE_trees/{orthogroup}.tree'
-    shell:
-        'FastTree < {input} > {output}'
+        'orthofinder -f {input} -M msa -n msa'
+    
 
 rule motree:
     input:
