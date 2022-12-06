@@ -1,6 +1,7 @@
 rule all:
     input:
-        'directory(data/FASTTREE_trees)'
+        'data/figures/Orthofinder_tree.png',
+        'data/figures/Msa_tree.png'
 
 rule longest_gene_variant:
     input:
