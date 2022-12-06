@@ -25,24 +25,25 @@ Burrowing owl (neoaves, strigiformes)
 
 
 ## Dependencies and versions
-Python 3.6.13
+Python=3.6.13
 
-Diamond 0.9.24
+Diamond=0.9.24
 
-Snakemake 3.13.3
+Snakemake=3.13.3
 
-IQTree 2.1.4_beta
+IQTree=2.1.4_beta
 
-MAFFT 7.505
+MAFFT=7.505
 
-Orthofinder 2.5.4
+Orthofinder=2.5.4
 
-Perl 5.26.2
+Perl=5.26.2
 
-Plottree 0.0.2
+Plottree=0.0.2
 
-BioPython 1.79
+BioPython=1.79
 
+Graphviz=2.42.2-3build2
 
 ## Installation
 Created a snakemake environment using conda named biof501. I will use this for my project.
