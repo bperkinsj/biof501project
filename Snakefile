@@ -22,7 +22,7 @@ rule msa_trees:
     shell:
         'orthofinder -f {input} -M msa -n msa'
 
-rule motree_comparison:
+rule gene_trees_comparison:
     input:
         tree1='data/primary_transcripts/OrthoFinder/Results_orthofinder/Resolved_Gene_Trees/{orthogroup}.txt',
         tree2='data/primary_transcripts/OrthoFinder/Results_msa/Resolved_Gene_Trees/{orthogroup}.txt'
