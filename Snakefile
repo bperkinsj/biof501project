@@ -47,6 +47,6 @@ rule visualize_species_trees:
         tree2='data/primary_transcripts/OrthoFinder/Results_msa/Species_Tree/SpeciesTree_rooted.txt'
     output:
         image1='data/figures/Orthofinder_tree.png',
-        image2='data/figuers/Msa_tree.png'
+        image2='data/figures/Msa_tree.png'
     shell:
         'plottree {input.tree1} -o {output.image1}; plottree {input.tree2} -o {output.image2}'
