@@ -33,9 +33,19 @@ rule gene_trees_comparison:
 
 rule species_trees_comparison:
     input:
-        tree1='data/primary_transcripts/OrthoFinder/Results_orthofinder/Species_Tree/SpeciesTree_rooted.txt'
+        tree1='data/primary_transcripts/OrthoFinder/Results_orthofinder/Species_Tree/SpeciesTree_rooted.txt',
         tree2='data/primary_transcripts/OrthoFinder/Results_msa/Species_Tree/SpeciesTree_rooted.txt'
     output:
         'data/comparison_tables/species_tree_comparison.tsv'
     shell:
         'CompareTree.pl -tree {input.tree1} -versus {input.tree2} > {output}'
+
+rule visualize_species_trees:
+    input:
+        tree1='data/primary_transcripts/OrthoFinder/Results_orthofinder/Species_Tree/SpeciesTree_rooted.txt',
+        tree2='data/primary_transcripts/OrthoFinder/Results_msa/Species_Tree/SpeciesTree_rooted.txt'
+    output:
+        image1='data/figures/Orthofinder_tree.png',
+        image2='data/figuers/Msa_tree.png'
+    shell:
+        'plottree {input.tree1} -o {output.image1}; plottree {input.tree2} -o {output.image2}'
