@@ -10,10 +10,10 @@ rule longest_gene_variant:
         'for f in {input}; do python ~/anaconda3/pkgs/orthofinder-2.5.4-hdfd78af_0/bin/primary_transcript.py $f ; done'
 
 rule orthofinder:
-    output:
+    input:
         'directory(data/primary_transcripts)'
     shell:
-        'orthofinder -f {output}'
+        'orthofinder -f {input}'
 
 rule mafft:
     input:
