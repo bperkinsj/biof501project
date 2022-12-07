@@ -1,12 +1,14 @@
-# Rough Draft
+# BIOF501 Term Project: Generating the (Partial) Avian Phylogenetic Tree
 
-## Welcome to the repository for my BIOF 501 project!
+### _By Brooks Perkins-Jechow_
 
-Here you will find all information of note in the universe. Every morsel, every tidbit, lovingly tidied over and tucked into their proper positions. You need read nothing else to understand all that has occurred, is occurring, and will occur within this beautiful fallacy we call reality.
+___ 
+
+## Overview
 
 Birds are a very diverse group of vertebrates. To be precise, they are the most diverse (species-wise) of all tetrapod vertebrates [[1]](#references), and among these species is an extraordinary range of physical characteristics and abilities. Hummingbirds have heart rates that can vary from 1000 bpm when excited to 50 bpm when at rest. Owls have eyes so large that they cannot turn them in their sockets, and must instead rotate their heads up to 270 degrees. Arctic terns migrate 70,900 km per year in their trips from their breeding grounds in Iceland and Greenland to their wintering grounds in Antarctica and back. These varied capabilities imply an equally varied genetic makeup, a makeup which already informs our understanding of fields such as neuroscience, developmental biology, and immunology [[2]](#references)[[3]](#references)[[4]](#references).
 
-This genetic variety also makes resolving the evolutionary tree an exceedingly difficult task. Multiple attempts have been made, each differing from the last, and there seems to be no end in sight[5](#references). 
+This genetic variety also makes resolving the evolutionary tree an exceedingly difficult task. Multiple attempts have been made, each differing from the last, and studies continue to add to the pile[5](#references). Pinning down the phylogenetic placement of a specific bird - the hoatzin, a South American bird exhibiting a host of bizarre traits such as having clawed wing digits at birth - has been so difficult that it's become a joke in the phylogenetic community [[6]](#references)[[7]](#references)[[8]](#references). 
 
 Several species of birds, including the chicken (Gallus gallus), pigeon (rock dove) (Columba livia), and zebra finch (Taeniopygia guttata), are already counted among the model research species in such fields as neuroscience and developmental biology (2).
 
@@ -41,6 +43,7 @@ Burrowing owl, _Athene cunicularia_ (Strigiformes, Neoaves)
 
 
 ## Dependencies and versions
+
 Python=3.6.13
 
 Diamond=0.9.24
@@ -62,6 +65,7 @@ BioPython=1.79
 Graphviz=2.42.2-3build2
 
 ## Installation
+
 Created a snakemake environment using conda named biof501. I will use this for my project.
 
 Managed to get orthofinder to work through conda. Had to update diamond to the recommended version.
@@ -88,4 +92,9 @@ sudo apt install graphviz
 
 [5] Lewis, Dyani. "67 million-year-old fossil upends bird evolutionary tree." _Nature_, 30 Nov. 2022, https://www.nature.com/articles/s41586-022-05445-y. Accessed 07 Dec. 2022
 
-[6] Gill F, D Donsker & P Rasmussen  (Eds). 2022. IOC World Bird List (v12.2). doi :  10.14344/IOC.ML.12.2.
+[6] Crair, Ben. "The Bizarre Bird that's Breaking the Tree of Life." _The New Yorker_, 15 Jul. 2022, https://www.newyorker.com/science/elements/the-bizarre-bird-thats-breaking-the-tree-of-life. Accessed 07 Dec. 2022
+
+[7] Hughes, JM, and Baker, AJ, [Phylogenetic relationships of the enigmatic hoatzin (Opisthocomus hoazin) resolved using mitochondrial and nuclear gene sequences](https://pubmed.ncbi.nlm.nih.gov/10486983/), Mol Biol Evol. 1999 Sep;16(9):1300-7. doi: 10.1093/oxfordjournals.molbev.a026220.
+
+[9] Gill F, D Donsker & P Rasmussen  (Eds). 2022. IOC World Bird List (v12.2). doi :  10.14344/IOC.ML.12.2.
+
