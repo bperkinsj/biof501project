@@ -11,8 +11,8 @@ rule all:
     input:
         'data/figures/Orthofinder_tree.png',
         'data/figures/Msa_tree.png',
-        'data/species_comparison_tables/species_tree_comparison.tsv',
-        'data/gene_comparison_tables/{orthogroup}.tsv'
+        'data/species_comparison_tables/species_tree_comparison.tsv'
+        # 'data/gene_comparison_tables/{orthogroup}.tsv'
 
 
 rule longest_gene_variant:
@@ -37,14 +37,14 @@ rule msa_trees:
     shell:
         'orthofinder -f {input} -M msa -n msa'
 
-rule gene_trees_comparison:
-    input:
-        tree1=get_orthofinder_results_orthogroups,
-        tree2=get_msa_results_orthogroups
-    output:
-        'data/gene_comparison_tables/{orthogroup}.tsv'
-    shell:
-        'CompareTree.pl -tree {input.tree1} -versus {input.tree2} > {output}'
+# rule gene_trees_comparison:
+#     input:
+#         tree1=get_orthofinder_results_orthogroups,
+#         tree2=get_msa_results_orthogroups
+#     output:
+#         'data/gene_comparison_tables/{orthogroup}.tsv'
+#     shell:
+#         'CompareTree.pl -tree {input.tree1} -versus {input.tree2} > {output}'
 
 rule species_trees_comparison:
     input:
