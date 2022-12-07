@@ -1,3 +1,5 @@
+import os, os.path
+
 rule all:
     input:
         'data/figures/Orthofinder_tree.png',
@@ -14,12 +16,16 @@ rule longest_gene_variant:
 rule orthofinder_trees:
     input:
         'directory(data/primary_transcripts)'
+    output:
+        'data/primary_transcripts/OrthoFinder/Results_orthofinder/Species_Tree/SpeciesTree_rooted.txt'
     shell:
         'orthofinder -f {input} -n orthofinder'
 
 rule msa_trees:
     input:
         'directory(data/primary_transcripts)'
+    output:
+        'data/primary_transcripts/OrthoFinder/Results_msa/Species_Tree/SpeciesTree_rooted.txt'
     shell:
         'orthofinder -f {input} -M msa -n msa'
 
