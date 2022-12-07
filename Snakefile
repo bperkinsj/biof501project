@@ -11,7 +11,7 @@ rule all:
     input:
         'data/figures/Orthofinder_tree.png',
         'data/figures/Msa_tree.png',
-        'data/species_comparison_tables/species_tree_comparison.tsv'
+        'data/comparison_table/species_tree_comparison.tsv'
         # 'data/gene_comparison_tables/{orthogroup}.tsv'
 
 
@@ -27,7 +27,7 @@ rule orthofinder_trees:
     output:
         'data/primary_transcripts/OrthoFinder/Results_orthofinder/Species_Tree/SpeciesTree_rooted.txt'
     shell:
-        'orthofinder -f {input} -n orthofinder'
+        'rm -rf data/primary_transcripts/OrthoFinder/Results_orthofinder_1 ; orthofinder -f {input} -n orthofinder'
 
 rule msa_trees:
     input:
@@ -35,7 +35,7 @@ rule msa_trees:
     output:
         'data/primary_transcripts/OrthoFinder/Results_msa/Species_Tree/SpeciesTree_rooted.txt'
     shell:
-        'orthofinder -f {input} -M msa -n msa'
+        'rm -rf data/primary_transcripts/OrthoFinder/Results_msa_1 ; orthofinder -f {input} -M msa -n msa'
 
 # rule gene_trees_comparison:
 #     input:
@@ -51,7 +51,7 @@ rule species_trees_comparison:
         tree1='data/primary_transcripts/OrthoFinder/Results_orthofinder/Species_Tree/SpeciesTree_rooted.txt',
         tree2='data/primary_transcripts/OrthoFinder/Results_msa/Species_Tree/SpeciesTree_rooted.txt'
     output:
-        'data/species_comparison_table/species_tree_comparison.tsv'
+        'data/comparison_table/species_tree_comparison.tsv'
     shell:
         'CompareTree.pl -tree {input.tree1} -versus {input.tree2} > {output}'
 
