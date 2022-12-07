@@ -1,17 +1,22 @@
 import os, os.path
 
+def get_orthofinder_results_orthogroups(wildcards):
+    return 'data/primary_transcripts/OrthoFinder/Results_orthofinder/Resolved_Gene_Trees/{wildcard}.txt'.format(wildcard=wildcards.orthogroup)
+
+def get_msa_results_orthogroups(wildcards):
+    return 'data/primary_transcripts/OrthoFinder/Results_msa/Resolved_Gene_Trees/{wildcard}.txt'.format(wildcard=wildcards.orthogroup)
+
+
 rule all:
     input:
         'data/figures/Orthofinder_tree.png',
         'data/figures/Msa_tree.png'
 
 rule longest_gene_variant:
-    input:
-        'data/{species}.fa'
     output:
-        'data/primary_transcripts/{species}.fa'
+        'directory(data/primary_transcripts)'
     shell:
-        'for f in {input}; do python ~/anaconda3/pkgs/orthofinder-2.5.4-hdfd78af_0/bin/primary_transcript.py $f ; done'
+        'for f in data/*.fa; do python ~/anaconda3/pkgs/orthofinder-2.5.4-hdfd78af_0/bin/primary_transcript.py $f ; done'
 
 rule orthofinder_trees:
     input:
@@ -31,10 +36,10 @@ rule msa_trees:
 
 rule gene_trees_comparison:
     input:
-        tree1='data/primary_transcripts/OrthoFinder/Results_orthofinder/Resolved_Gene_Trees/{orthogroup}.txt',
-        tree2='data/primary_transcripts/OrthoFinder/Results_msa/Resolved_Gene_Trees/{orthogroup}.txt'
+        tree1=get_orthofinder_results_orthogroups,
+        tree2=get_msa_results_orthogroups
     output:
-        'data/comparison_tables/{orthogroup}.tsv'
+        'data/comparison_tables/{orthogroup}.txt'
     shell:
         'CompareTree.pl -tree {input.tree1} -versus {input.tree2} > {output}'
 
