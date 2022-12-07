@@ -27,7 +27,7 @@ rule orthofinder_trees:
     output:
         'data/primary_transcripts/OrthoFinder/Results_orthofinder/Species_Tree/SpeciesTree_rooted.txt'
     shell:
-        'rm -rf data/primary_transcripts/OrthoFinder/Results_orthofinder_1 ; orthofinder -f {input} -n orthofinder'
+        'rm -rf data/primary_transcripts/OrthoFinder/Results_orthofinder ; orthofinder -f {input} -n orthofinder'
 
 rule msa_trees:
     input:
@@ -35,7 +35,7 @@ rule msa_trees:
     output:
         'data/primary_transcripts/OrthoFinder/Results_msa/Species_Tree/SpeciesTree_rooted.txt'
     shell:
-        'rm -rf data/primary_transcripts/OrthoFinder/Results_msa_1 ; orthofinder -f {input} -M msa -n msa'
+        'rm -rf data/primary_transcripts/OrthoFinder/Results_msa ; orthofinder -f {input} -M msa -n msa'
 
 # rule gene_trees_comparison:
 #     input:
