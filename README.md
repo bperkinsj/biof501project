@@ -8,20 +8,28 @@ Birds are a very diverse group of vertebrates. The most diverse, in fact, and wi
 
 
 ### Species of interest
-Little spotted kiwi (paleoagnathae)
 
-Helmeted guineafowl (galloanseres)
+Species selected based on the IOC World Bird List Version 12.2 (Gill F, D Donsker & P Rasmussen  (Eds). 2022. IOC World Bird List (v12.2). doi :  10.14344/IOC.ML.12.2.)
 
-Budgerigar (Neoaves, psittaciformes)
+Common name, species name (order, infraclass)
 
-Collared flycatcher (neoaves, passeriformes)
+Little spotted kiwi, _Apteryx owenii_ (Apterygiformes, Galeoagnathae)
 
-Spoon-billed sandpiper (neoaves, charadriiformes)
+Helmeted guineafowl, _Numida meleagris_ (Galliformes, Galloanseres)
 
-Burrowing owl (neoaves, strigiformes)
+Mallard, _Anas platyrhynchos_ (Anseriformes, Galloanseres)
 
+Eurasian sparrowhawk, _Accipiter nisus_ (Accipitriformes, Neoaves)
 
+Common kestrel, _Falco tinnunculus_ (Falconiformes, Neoaves)
 
+Budgerigar, _Melopsittacus undulatus_ (Psittaciformes, Neoaves)
+
+Collared flycatcher, _Ficedula albicollis_ (Passeriformes, Neoaves)
+
+Spoon-billed sandpiper, _Calidris pygmaea_ (Charadriiformes, Neoaves)
+
+Burrowing owl, _Athene cunicularia_ (Strigiformes, Neoaves)
 
 
 ## Dependencies and versions
