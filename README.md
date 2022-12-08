@@ -62,7 +62,7 @@ Plottree=0.0.2
 
 BioPython=1.79
 
-Graphviz=2.42.2-3build2
+Graphviz=0.19.1
 
 ## Installation
 
@@ -82,7 +82,7 @@ sudo apt install graphviz
 
 ## Results
 
-The message spit out by CompareTree in the terminal should look like this:
+The message produced by CompareTree in the terminal should look like this:
 
 ```
 Splits  Found   3       Total   6       Frac    0.5     MaxLnDf 0.0124  Ratio   1.74    MaxBtDf 0.918
