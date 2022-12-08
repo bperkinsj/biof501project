@@ -90,6 +90,11 @@ Splits  Found   3       Total   6       Frac    0.5     MaxLnDf 0.0124  Ratio   
 
 ## References
 
+Orthofinder: Emms D.M. & Kelly S. (2019), Genome Biology 20:238
+
+Orthofinder species tree: Emms D.M. & Kelly S. (2017), MBE 34(12): 3267-3278
+ Emms D.M. & Kelly S. (2018), bioRxiv https://doi.org/10.1101/267914
+
 [1] F. Gill, D. Donsker, [IOC World Bird List](https://library.wur.nl/WebQuery/recommendeddb/find/2300064) (version 11.1) (2021)
 
 [2] Zeigler, H. P., & Marler, P. (Eds.), [Behavioral neurobiology of birdsong](https://psycnet.apa.org/record/2004-16790-000), New York Academy of Sciences (2004)
