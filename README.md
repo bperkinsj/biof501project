@@ -80,6 +80,14 @@ You will also have to install graphviz.
 sudo apt install graphviz
 ```
 
+## Results
+
+The message spit out by CompareTree in the terminal should look like this:
+
+```
+Splits  Found   3       Total   6       Frac    0.5     MaxLnDf 0.0124  Ratio   1.74    MaxBtDf 0.918
+```
+
 ## References
 
 [1] F. Gill, D. Donsker, [IOC World Bird List](https://library.wur.nl/WebQuery/recommendeddb/find/2300064) (version 11.1) (2021)
