@@ -23,7 +23,7 @@ ___
 
 Birds are a very diverse group. To be precise, they are the most species-rich lineage of all tetrapod vertebrates [[1]](#references), and among these species is an extraordinary range of physical characteristics and abilities. Hummingbirds have heart rates that can vary from 1000 bpm when excited to 50 bpm when at rest. Owls have eyes so large that they cannot turn them in their sockets, and must instead rotate their heads up to 270 degrees. Arctic terns migrate 70,900 km per year in their trips from their breeding grounds in Iceland and Greenland to their wintering grounds in Antarctica and back. These varied capabilities imply an equally varied genetic makeup, a makeup which already informs our understanding of fields such as neuroscience, developmental biology, and immunology [[2]](#references)[[3]](#references)[[4]](#references).
 
-This genetic variety also makes resolving the evolutionary tree an exceedingly difficult task. Multiple attempts have been made, each arriving at a different result, and there's no sign of slowing down [[4.01]](#references)[[4.1]](#references)[[5]](#references). Pinning down the phylogenetic placement of one bird, the hoatzin, has been so difficult that it seems to be a running joke to describe it as "enigmatic" [[6]](#references)[[7]](#references)[[8]](#references). Little wonder, that, when the hoatzin 
+This genetic variety also makes resolving the avian evolutionary tree an exceedingly difficult task. Pinning down the phylogenetic placement of one bird, the hoatzin, has been so difficult that it seems to be a running joke to describe it as "enigmatic" [[6]](#references)[[7]](#references)[[8]](#references). Other attempts at determining the relationships between species or families have ended with bemusingly different results [[4.01]](#references)[[4.1]](#references)[[5]](#references). Perhaps the most ambitious of these is the Bird 10K project, which, as its name implies, seeks to "generate draft genome sequences for about 10,500 extant bird species" [[8.1]](#references). The project started with a genome-scale analysis of 48 species representing every neoavian order, released in 2014, and reached its second goal of 363 genomes from 92.4% of bird families in 2020 [[8.2]](#references)[[8.3]](#references). This project may represent the best chance at fully characterizing the avian phylogenetic tree, though the computing power necessary for it will be staggering [[8.2]](#references)
 
 
 After the original Orthofinder algorithm 
@@ -140,6 +140,12 @@ Orthofinder species tree: Emms D.M. & Kelly S. (2017), MBE 34(12): 3267-3278
 [7] Hughes, JM, and Baker, AJ, [Phylogenetic relationships of the enigmatic hoatzin (Opisthocomus hoazin) resolved using mitochondrial and nuclear gene sequences](https://pubmed.ncbi.nlm.nih.gov/10486983/), Mol Biol Evol. 1999 Sep;16(9):1300-7. doi: 10.1093/oxfordjournals.molbev.a026220.
 
 [8] Hedges SB, Simmons MD, van Dijk MA, Caspers GJ, de Jong WW, Sibley CG. [Phylogenetic relationships of the hoatzin, an enigmatic South American bird](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC40462/). Proc Natl Acad Sci U S A. 1995 Dec 5;92(25):11662-5. doi: 10.1073/pnas.92.25.11662. PMID: 8524824; PMCID: PMC40462.
+
+[8.1] Zhang, G. Bird sequencing project takes off. Nature 522, 34 (2015). https://doi.org/10.1038/522034d
+
+[8.2] Jarvis, E.D., et al. whole-genome analyses resolve early branches in the tree of life of modern birds. Science 346, 1320-133 (2014). DOI: [10.1126/science.1253451](https://www.science.org/doi/10.1126/science.1253451)
+
+[8.3] Feng, S., Stiller, J., Deng, Y. et al. Dense sampling of bird diversity increases power of comparative genomics. Nature 587, 252–257 (2020). https://doi.org/10.1038/s41586-020-2873-9
 
 [9] Gill F, D Donsker & P Rasmussen  (Eds). 2022. IOC World Bird List (v12.2). doi :  10.14344/IOC.ML.12.2.
 
