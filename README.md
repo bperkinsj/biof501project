@@ -39,19 +39,19 @@ Burrowing owl, _Athene cunicularia_ (Strigiformes, Neoaves)
 
 ## Dependencies and versions
 
-Python=3.6.13
+Python=3.6.15
 
-Diamond=0.9.24
+Diamond=2.0.15
 
 Snakemake=3.13.3
 
-IQTree=2.1.4_beta
+FastTree=2.1.11
 
-MAFFT=7.505
+MAFFT=7.508
 
 Orthofinder=2.5.4
 
-Perl=5.26.2
+Perl=5.32.1
 
 Plottree=0.0.2
 
@@ -61,26 +61,38 @@ Graphviz=0.19.1
 
 ## Installation
 
-Created a snakemake environment using conda named biof501. I will use this for my project.
+### Using the class.cidgoh.ca server
 
-Managed to get orthofinder to work through conda. Had to update diamond to the recommended version.
-
-```
-conda env create -f environment.yml
-```
-
-Alternative installation:
+On the server, you can use the virtual environment already set up.
 
 ```
 conda deactivate
 ```
 
 ```
-conda create -n biof501
+conda activate brooksenv
+```
+
+Then start the snakemake pipeline.
+
+```
+snakemake --cores
+```
+
+### Setting up elsewhere
+
+At the time of writing the pipeline, conda had a bug that prevented creating an environment.yml file. You can follow the steps below to set up the environment with all the requisite packages.
+
+```
+conda deactivate
 ```
 
 ```
-conda activate biof501
+conda create -n brooksenv
+```
+
+```
+conda activate brooksenv
 ```
 
 ```
@@ -88,7 +100,7 @@ conda install -c bioconda snakemake=3.13.3
 ```
 
 ```
-conda install -c bioconda orthofinder
+conda install -c bioconda orthofinder=2.5.4
 
 ```
 
@@ -100,8 +112,17 @@ pip install plottree
 pip install graphviz
 ```
 
+
+Check that the diamond version matches the given dependencies. If not, you'll have to update it.
+
 ```
-conda install -c bioconda diamond=0.9.24
+conda install -c bioconda diamond=2.0.15
+```
+
+Then start the snakemake pipeline as above.
+
+```
+snakemake --cores
 ```
 
 ## Results
