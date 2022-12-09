@@ -109,7 +109,7 @@ conda install -c bioconda diamond=0.9.24
 The message produced by CompareTree in the terminal should look like this:
 
 ```
-Splits  Found   3       Total   6       Frac    0.5     MaxLnDf 0.0124  Ratio   1.74    MaxBtDf 0.918
+Splits  Found   1       Total   3       Frac    0.3333  MaxLnDf 0.00672 Ratio   1.4     MaxBtDf 0.692
 ```
 
 ## References
