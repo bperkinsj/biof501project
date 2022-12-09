@@ -113,7 +113,7 @@ pip install graphviz
 ```
 
 
-Check that the diamond version matches the given dependencies. If not, you'll have to update it.
+Check that the diamond version matches the given dependency. If not, you'll have to update it.
 
 ```
 conda install -c bioconda diamond=2.0.15
