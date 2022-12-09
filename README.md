@@ -79,7 +79,7 @@ pip install plottree
 pip install graphviz
 ```
 
-Check that the diamond version matches the given dependency. If not, you'll have to update it.
+Check that your package versions match those given above. It's important that you install snakemake version 3.13.3 first as it should install the appropriate Python version.
 
 ```
 conda install -c bioconda diamond=2.0.15
