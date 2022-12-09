@@ -9,7 +9,7 @@ rule longest_gene_variant:
     output:
         'data/primary_transcripts/'
     shell:
-        'for f in data/*.fa; do python ~/anaconda3/pkgs/orthofinder-2.5.4-hdfd78af_0/bin/primary_transcript.py $f ; done'
+        'for f in data/*.fa; do python tools/primary_transcripts.py $f ; done'
 
 rule orthofinder_trees:
     input:
