@@ -61,57 +61,23 @@ Graphviz=0.19.1
 
 ## Installation
 
-### Using the class.cidgoh.ca server
-
-On the server, you can use the virtual environment already set up.
+ At the time of writing the pipeline, conda had a bug that prevented creating an environment.yml file. You can follow the steps below to set up the environment with all the requisite packages.
 
 ```
 conda deactivate
-```
 
-```
-conda activate brooksenv
-```
-
-Then start the snakemake pipeline.
-
-```
-snakemake --cores
-```
-
-### Setting up elsewhere
-
-At the time of writing the pipeline, conda had a bug that prevented creating an environment.yml file. You can follow the steps below to set up the environment with all the requisite packages.
-
-```
-conda deactivate
-```
-
-```
 conda create -n brooksenv
-```
 
-```
 conda activate brooksenv
-```
 
-```
 conda install -c bioconda snakemake=3.13.3
-```
 
-```
 conda install -c bioconda orthofinder=2.5.4
 
-```
-
-```
 pip install plottree
-```
 
-```
 pip install graphviz
 ```
-
 
 Check that the diamond version matches the given dependency. If not, you'll have to update it.
 
