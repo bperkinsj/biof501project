@@ -25,13 +25,7 @@ Birds are a very diverse group of animals. To be precise, they are the most spec
 
 This genetic variety also makes resolving the avian evolutionary tree an exceedingly difficult task. Pinning down the phylogenetic placement of one bird, the hoatzin, has been so difficult that it seems to be a running joke to describe it as "enigmatic" [[6]](#references)[[7]](#references)[[8]](#references). Other attempts at determining the relationships between species or families have ended with bemusingly different results [[4.01]](#references)[[4.1]](#references)[[5]](#references). Perhaps the most ambitious of these is the Bird 10K project, which, as its name implies, seeks to "generate draft genome sequences for about 10,500 extant bird species" [[8.1]](#references). However, the computing power necessary for only the first draft tree of 48 species was already excessive, amounting to >400 years of computing time  on a single processor and requiring 9 supercomputer centers[[8.2]](#references). Despite this, it may constitute the best chance for fully characterizing the avian phylogenetic tree and is making good progress [[8.3]](#references).
 
-
-After the original Orthofinder algorithm 
-
-Hoatzin articles
-- https://www.nature.com/articles/nature15697.epdf?referrer_access_token=dYPS_vdiSrZCn0QIpkrrotRgN0jAjWel9jnR3ZoTv0M2DJlqpbYXUSzXrY3ePCj9lli0g-87ASrwV9zCmuRb-yBSwhk2MbGjYN4LSqqo508IuixYv2ArUPwmjVeCUtxJqcH3bn53gAq6_baELEjd8dj8SuLpQ-ryl4wzQpWbHwucgGZzCtaabnQf9Xcb8LM9ZmAgvpl5vaeA-bGP702OuunbFOnFwQc46HkRTtQ_hEY%3D&tracking_referrer=arstechnica.com
-- https://pubmed.ncbi.nlm.nih.gov/10486983/
-- https://www.ncbi.nlm.nih.gov/pmc/articles/PMC40462/
+This pipeline attempts to construct a phylogenetic tree on a much smaller scale, using only six species representing a diverse range of orders as categorized in the IOC World Bird List version 12.2 [[9]](#references)(see species of interest [below](#species-of-interest)). The pipeline uses Orthofinder [[10]] to run two separate analyses: one infers the orthogroup trees using DendroBLAST [[11]](#references), a BLAST-based hierarchical clustering algorithm, while the other infers the orthogroup trees with MAFFT, a multiple sequence alignment software [[12]](#references), and FastTree, which generates approximately-maximum-likelihood phylogenetic trees [[13]](#references). Using two approaches to generate the trees allows us to compare them and observe the effect that different methods can have when predicting even small-scale phylogenetic trees (it is worth noting that multiple sequence alignment is considered the more robust approach). We then use [MOTreeComparison](http://www.microbesonline.org/fasttree/treecmp.html) to directly compare the species trees and [PlotTree](#https://github.com/iBiology/plottree) to produce human-readable images of the trees. 
 
 ### Species of interest
 
@@ -76,14 +70,16 @@ Graphviz=0.19.1
 
 ## Installation
 
- At the time of writing the pipeline, conda had a bug that prevented creating an environment.yml file. You can follow the steps below to set up the environment with all the requisite packages.
+
+
+ At the time of writing the pipeline, conda had a bug that prevented creating an environment.yml file. You can follow the steps below to set up the environment with all the requisite packages. _IMPORTANT: do not attempt to install Python before Snakemake unless you specify the correct Python version. Installing Snakemake 3.13.3 will also install the necessary Python version. The pipeline **may not work** with versions of Python past 3.6.15_. 
 
 ```
 conda deactivate
 
-conda create -n brooksenv
+conda create -n birdenv
 
-conda activate brooksenv
+conda activate birdenv
 
 conda install -c bioconda snakemake=3.13.3
 
@@ -149,3 +145,10 @@ Orthofinder species tree: Emms D.M. & Kelly S. (2017), MBE 34(12): 3267-3278
 
 [9] Gill F, D Donsker & P Rasmussen  (Eds). 2022. IOC World Bird List (v12.2). doi :  10.14344/IOC.ML.12.2.
 
+[10] Emms, D.M., Kelly, S. OrthoFinder: phylogenetic orthology inference for comparative genomics. Genome Biol 20, 238 (2019). https://doi.org/10.1186/s13059-019-1832-y
+
+[11] Kelly, S., and Maini, P.K. DendroBLAST: Approximate Phylogenetic Trees in the Absence of Multiple Sequence Alignments. PLOS One, 15 Mar. 2013. https://doi.org/10.1371/journal.pone.0058537
+
+[12] Kazutaka Katoh, Daron M. Standley, MAFFT Multiple Sequence Alignment Software Version 7: Improvements in Performance and Usability, Molecular Biology and Evolution, Volume 30, Issue 4, April 2013, Pages 772–780, https://doi.org/10.1093/molbev/mst010
+
+[13] Morgan N. Price, Paramvir S. Dehal, Adam P. Arkin, FastTree: Computing Large Minimum Evolution Trees with Profiles instead of a Distance Matrix, Molecular Biology and Evolution, Volume 26, Issue 7, July 2009, Pages 1641–1650, https://doi.org/10.1093/molbev/msp077
