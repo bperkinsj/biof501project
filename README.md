@@ -13,7 +13,7 @@ ___
 
 - MOTReeComparison: contains the files necessary to run the MOTreeComparison tool.
 
-- tools: contains a python script from Orthofinder that selects for only the longest transcript variant per gene from our species files. This lowers the time needed to run the analysis and also raises the accuracy.
+- tools: contains the Python script from Orthofinder used in the first step of the pipeline.
 
 ### Files
 
@@ -21,13 +21,15 @@ ___
 
 - Snakefile: Snakemake instructions to run the pipeline.
 
+_______
+
 ## Overview
 
 Birds are a very diverse group of animals. To be precise, they are the most species-rich lineage of all tetrapod vertebrates [[1]](#references), and among these species is an extraordinary range of physical characteristics and abilities. Hummingbirds have heart rates that can vary from 1000 bpm when excited to 50 bpm when at rest. Owls have eyes so large that they cannot turn them in their sockets, and must instead rotate their heads up to 270 degrees. Arctic terns migrate 70,900 km per year in their trips from their breeding grounds in Iceland and Greenland to their wintering grounds in Antarctica and back. These varied capabilities imply an equally varied genetic makeup, a makeup which already informs our understanding of fields such as neuroscience, developmental biology, and immunology [[2]](#references)[[3]](#references)[[4]](#references).
 
 This genetic variety also makes resolving the avian evolutionary tree an exceedingly difficult task. Pinning down the phylogenetic placement of one bird, the hoatzin, has been so difficult that it seems to be a running joke to describe it as "enigmatic" [[6]](#references)[[7]](#references)[[8]](#references). Other attempts at determining the relationships between species or families have ended with bemusingly different results [[4.01]](#references)[[4.1]](#references)[[5]](#references). Perhaps the most ambitious of these is the Bird 10K project, which, as its name implies, seeks to "generate draft genome sequences for about 10,500 extant bird species" [[8.1]](#references). However, the computing power necessary for only the first draft tree of 48 species was already excessive, amounting to >400 years of computing time  on a single processor and requiring 9 supercomputer centers[[8.2]](#references). Despite this, it may constitute the best chance for fully characterizing the avian phylogenetic tree and is making good progress [[8.3]](#references).
 
-This pipeline attempts to construct a phylogenetic tree on a much smaller scale, using only six species representing a diverse range of orders as categorized in the IOC World Bird List version 12.2 [[9]](#references)(see species of interest [below](#species-of-interest)). The pipeline uses Orthofinder [[10]] to run two separate analyses: one infers the orthogroup trees using DendroBLAST [[11]](#references), a BLAST-based hierarchical clustering algorithm, while the other infers the orthogroup trees with MAFFT, a multiple sequence alignment software [[12]](#references), and FastTree, which generates approximately-maximum-likelihood phylogenetic trees [[13]](#references). Using two approaches to generate the trees allows us to compare them and observe the effect that different methods can have when predicting even small-scale phylogenetic trees (it is worth noting that multiple sequence alignment is considered the more robust approach). We then use [MOTreeComparison](http://www.microbesonline.org/fasttree/treecmp.html) to directly compare the species trees and [PlotTree](#https://github.com/iBiology/plottree) to produce human-readable images of the trees. 
+This pipeline attempts to construct a phylogenetic tree on a much smaller scale, using only six species representing a diverse range of orders as categorized in the IOC World Bird List version 12.2 [[9]](#references)(see species of interest [below](#species-of-interest)). This provides a selection large enough for a diverse tree, but not so large it is computationally onerous. It uses two different inference methods (outlined below) to produce two species trees, allowing us to compare them and observe the effect that different methods can have when predicting even small-scale phylogenetic trees. 
 
 ### Species of interest
 
@@ -46,6 +48,22 @@ Collared flycatcher, _Ficedula albicollis_ (Passeriformes, Neoaves)
 Spoon-billed sandpiper, _Calidris pygmaea_ (Charadriiformes, Neoaves)
 
 Burrowing owl, _Athene cunicularia_ (Strigiformes, Neoaves)
+
+
+## Workflow Overview
+
+![a directed acyclic graph of the Snakemake workflow](dag.svg)
+
+The key steps are detailed here:
+
+- First, the pipeline runs an Orthofinder script to select the longest variant of a given gene in each species file. This reduces the time and increases the accuracy of the succeeding steps.
+
+- The pipeline then uses Orthofinder [[10]](#references) to run two separate analyses: one infers the orthogroup trees using the default method, DendroBLAST [[11]](#references), a BLAST-based hierarchical clustering algorithm, while the other infers the orthogroup trees with MAFFT, a multiple sequence alignment (MSA) software [[12]](#references), and FastTree, which generates approximately-maximum-likelihood phylogenetic trees [[13]](#references).  
+
+- We then use [MOTreeComparison](http://www.microbesonline.org/fasttree/treecmp.html) to directly compare the species trees. 
+
+- Finally, [PlotTree](#https://github.com/iBiology/plottree) produces human-readable images of the trees. 
+______
 
 
 ## Dependencies and versions
@@ -72,6 +90,7 @@ Graphviz=0.19.1
 
 ## Installation
 
+The species data to be analyzed are provided. They are taken from the [ensemble.org](ensemble.org) 
 
 
  At the time of writing the pipeline, conda had a bug that prevented creating an environment.yml file. You can follow the steps below to set up the environment with all the requisite packages. _IMPORTANT: do not attempt to install Python before Snakemake unless you specify the correct Python version. Installing Snakemake 3.13.3 will also install the necessary Python version. The pipeline **may not work** with versions of Python past 3.6.15_. 
@@ -112,6 +131,11 @@ The message produced by CompareTree in the terminal should look like this:
 Splits  Found   1       Total   3       Frac    0.3333  MaxLnDf 0.00672 Ratio   1.4     MaxBtDf 0.692
 ```
 
+The species tree produced by MSA should look like this:
+
+![an image of a phylogenetic tree of six bird species](expected_output/figures/Msa_tree.png)
+
+The species tree produced by the default should look like this:
 ## References
 
 Orthofinder: Emms D.M. & Kelly S. (2019), Genome Biology 20:238
