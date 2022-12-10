@@ -9,6 +9,8 @@ ___
 
 - data: contains the protein sequence files for the species of interest (see [below](#species-of-interest)). It will also contain the results files when the pipeline has finished runnning.
 
+- expected_output: contains the expected results from running the pipeline. 
+
 - MOTReeComparison: contains the files necessary to run the MOTreeComparison tool.
 
 - tools: contains a python script from Orthofinder that selects for only the longest transcript variant per gene from our species files. This lowers the time needed to run the analysis and also raises the accuracy.
