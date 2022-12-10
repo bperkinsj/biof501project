@@ -109,6 +109,8 @@ Then you can start the pipeline!
 ```
 snakemake --cores
 ```
+
+Note that the pipeline can be quite time-intensive (>=1.5 hours). 
 ____
 
 ## Results
