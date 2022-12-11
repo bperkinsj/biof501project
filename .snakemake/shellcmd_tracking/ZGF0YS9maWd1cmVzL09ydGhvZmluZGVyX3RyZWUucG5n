@@ -1,1 +1,0 @@
-plottree data/primary_transcripts/OrthoFinder/Results_orthofinder/Species_Tree/SpeciesTree_rooted.txt -o data/figures/Orthofinder_tree.png; plottree data/primary_transcripts/OrthoFinder/Results_msa/Species_Tree/SpeciesTree_rooted.txt -o data/figures/Msa_tree.png

@@ -1,1 +1,0 @@
-rm -rf data/primary_transcripts/OrthoFinder/Results_orthofinder ; orthofinder -f data/primary_transcripts/ -n orthofinder

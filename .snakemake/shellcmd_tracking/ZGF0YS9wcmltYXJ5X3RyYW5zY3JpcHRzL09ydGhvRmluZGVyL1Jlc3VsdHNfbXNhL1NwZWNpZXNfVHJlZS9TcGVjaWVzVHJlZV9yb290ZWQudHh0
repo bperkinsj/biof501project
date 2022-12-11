@@ -1,1 +1,0 @@
-rm -rf data/primary_transcripts/OrthoFinder/Results_msa ; orthofinder -f data/primary_transcripts/ -M msa -n msa

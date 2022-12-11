@@ -1,1 +1,0 @@
-for f in data/*.fa; do python ~/anaconda3/pkgs/orthofinder-2.5.4-hdfd78af_0/bin/primary_transcript.py $f ; done
