@@ -29,7 +29,7 @@ Birds are a very diverse group of animals. To be precise, they are the most spec
 
 This genetic variety also makes resolving the avian evolutionary tree an exceedingly difficult task. Pinning down the phylogenetic placement of one bird, the hoatzin, has been so difficult that it seems to be a running joke to describe it as "enigmatic" [[5]](#references)[[6]](#references). Other attempts at determining the relationships between species or families have ended with bemusingly different results [[7]](#references)[[8]](#references)[[9]](#references). Perhaps the most ambitious of these is the Bird 10K project, which, as its name implies, seeks to "generate draft genome sequences for about 10,500 extant bird species" [[10]](#references). However, the computing power necessary for only the first draft tree of 48 species was already excessive, amounting to >400 years of computing time  on a single processor and requiring 9 supercomputer centers[[11]](#references). Despite this, it may constitute the best chance for fully characterizing the avian phylogenetic tree and is making good progress [[12]](#references).
 
-This pipeline attempts to construct a phylogenetic tree on a much smaller scale, using only six species representing a diverse range of orders as categorized in the IOC World Bird List version 12.2 [[13]](#references)(see species of interest [below](#species-of-interest)). This provides a selection large enough for a diverse tree, but not so large it is computationally onerous. It uses two different inference methods (outlined below) to produce two species trees, allowing us to compare them and observe the effect that different methods can have when predicting even small-scale phylogenetic trees. 
+This pipeline attempts to construct a phylogenetic tree on a much smaller scale, using only six species representing a diverse range of orders as categorized in the IOC World Bird List version 12.2 [[13]](#references)(see species of interest [below](#species-of-interest)). This provides a selection large enough for a diverse tree, but not so large it is computationally onerous. It uses two different inference methods (outlined below) to produce two species trees, allowing us to compare them and observe the effect that different methods can have when predicting even small-scale phylogenetic trees. With luck, both methods will produce a tree comparable to the currently understood avian tree.
 
 ## Species of interest
 
@@ -134,6 +134,8 @@ The species tree produced by the default DendroBLAST method should look like thi
 The comparison table should look like this:
 
 ![an image of a spreadsheet with phylogenetic tree data](expected_output/comparison_table/comparison_table.png)
+
+As you can see, the MSA tree is very similar to the currently accepted tree [[11]](#references). This is in line with the understanding of multiple sequence alignment as one of the more robust phylogenetic tools. The DendroBLAST tree, however, is an abomination that might as well have been assembled by a drunkard. 
 
 ______
 
