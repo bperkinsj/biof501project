@@ -163,9 +163,7 @@ _____
 
 ## References
 
-OrthoFinder: Emms D.M. & Kelly S. (2019), Genome Biology 20:238
-
-OrthoFinder species tree: Emms D.M. & Kelly S. (2017), MBE 34(12): 3267-3278
+OrthoFinder species tree: Emms D.M. & Kelly S. (2017), MBE 34(12): 3267-3278 
  Emms D.M. & Kelly S. (2018), bioRxiv https://doi.org/10.1101/267914
 
 [1] F. Gill, D. Donsker, [IOC World Bird List](https://library.wur.nl/WebQuery/recommendeddb/find/2300064) (version 11.1) (2021)
